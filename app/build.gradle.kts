@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
@@ -5,18 +7,25 @@ plugins {
 
 android {
     namespace = "com.example.pantry2plate"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.pantry2plate"
-        minSdk = 36
+        minSdk = 33
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        val properties = Properties()
+        val propertiesFile = project.rootProject.file("local.properties")
+        if (propertiesFile.exists()) {
+            properties.load(propertiesFile.inputStream())
+        }
+
+        // This creates a variable you can use in your Kotlin code
+        buildConfigField("String", "SPOONACULAR_KEY", "\"${properties.getProperty("SPOONACULAR_API_KEY")}\"")
     }
 
     buildTypes {
@@ -34,6 +43,8 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
+        viewBinding = true
     }
 }
 
