@@ -50,9 +50,11 @@ android {
 }
 
 dependencies {
+    // api
+    implementation("io.coil-kt:coil-compose:2.6.0")
     implementation("com.squareup.retrofit2:retrofit:3.0.0")
     implementation("com.squareup.retrofit2:converter-gson:3.0.0")
-    implementation("com.github.bumptech.glide:glide:4.16.0")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -68,6 +70,8 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+    // navigation
+    implementation("androidx.navigation:navigation-compose:2.7.7")
 
     // Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:34.11.0"))
