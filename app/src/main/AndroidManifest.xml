@@ -30,7 +30,7 @@
 
         <activity android:name=".InputActivity" />
         <activity android:name=".ResultsActivity" />
-
+        <activity android:name=".HomeActivity" />
         <activity android:name=".LoginActivity" />
         <meta-data
             android:name="preloaded_fonts"

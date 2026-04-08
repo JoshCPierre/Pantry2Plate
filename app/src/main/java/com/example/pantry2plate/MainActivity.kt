@@ -11,14 +11,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Find your temporary button
-        val btnTempNav = findViewById<Button>(R.id.btnTempNav)
+        // Find the buttons from Klarissa's layout
+        val loginButton = findViewById<Button>(R.id.loginButton)
+        val registerButton = findViewById<Button>(R.id.registerButton)
 
-        // Set up the click listener
-        btnTempNav.setOnClickListener {
-            // Launch your InputActivity!
-            val intent = Intent(this, InputActivity::class.java)
+        // 1. Send them to the actual Login screen you just built
+        loginButton.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+        }
+
+        // 2. Placeholder for when you build the Register screen later
+        registerButton.setOnClickListener {
+            // val intent = Intent(this, RegisterActivity::class.java)
+            // startActivity(intent)
         }
     }
 }
