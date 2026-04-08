@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "551261013989",
+    "project_id": "pantry2plate-affb5",
+    "storage_bucket": "pantry2plate-affb5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551261013989:android:d6d08cc2d2fb388271110c",
+        "android_client_info": {
+          "package_name": "com.example.pantry2plate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL6BKjIPmnXS9ryt7JJijgH3DtR2s05aU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
