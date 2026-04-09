@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
 
         // 2. Placeholder for when you build the Register screen later
         registerButton.setOnClickListener {
-            // val intent = Intent(this, RegisterActivity::class.java)
-            // startActivity(intent)
+             val intent = Intent(this, RegisterActivity::class.java)
+             startActivity(intent)
         }
     }
 }
