@@ -2,6 +2,7 @@ package com.example.pantry2plate
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -16,6 +17,12 @@ class ResultsActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         val progressBar = findViewById<ProgressBar>(R.id.progressBar)
+        val btnBack = findViewById<ImageButton>(R.id.btnBack)
+
+        // Set up the back button
+        btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
 
         recyclerView.layoutManager = LinearLayoutManager(this)
 

@@ -14,7 +14,7 @@ class HomeActivity : AppCompatActivity() {
 
         // Navigate to the Input Screen you already built
         btnGoToPantry.setOnClickListener {
-            val intent = Intent(this, InputActivity::class.java)
+            val intent = Intent(this, SharedPantryActivity::class.java)
             startActivity(intent)
         }
     }
