@@ -4,6 +4,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface SpoonacularApi {
+
     @GET("recipes/findByIngredients")
     suspend fun findByIngredients(
         @Query("ingredients") ingredients: String,
