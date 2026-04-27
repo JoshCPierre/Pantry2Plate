@@ -11,10 +11,15 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val btnGoToPantry = findViewById<Button>(R.id.btnGoToPantry)
+        val btnViewSavedRecipes = findViewById<Button>(R.id.btnViewSavedRecipes)
 
-        // Navigate to the Input Screen you already built
         btnGoToPantry.setOnClickListener {
             val intent = Intent(this, SharedPantryActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnViewSavedRecipes.setOnClickListener {
+            val intent = Intent(this, SavedRecipesActivity::class.java)
             startActivity(intent)
         }
     }

@@ -26,6 +26,11 @@ class SharedPantryActivity : AppCompatActivity() {
         binding = ActivitySharedPantryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Handle Back Button
+        binding.btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+
         setupDropdown()
         setupRecyclerView()
         setupFirebaseListener()
@@ -38,11 +43,10 @@ class SharedPantryActivity : AppCompatActivity() {
             }
             if (ingredientDocMap.containsKey(ingredient)) {
                 Toast.makeText(this, "$ingredient is already in the pantry", Toast.LENGTH_SHORT).show()
-                binding.autoCompleteIngredient.text.clear() // Still clear it if it exists
+                binding.autoCompleteIngredient.text.clear()
                 return@setOnClickListener
             }
 
-            // Clear immediately for better UX
             binding.autoCompleteIngredient.text.clear()
 
             db.collection("global_pantry")
