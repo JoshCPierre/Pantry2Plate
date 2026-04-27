@@ -33,6 +33,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity"/>
         <activity android:name=".SharedPantryActivity"/>
+        <activity android:name=".SavedRecipesActivity"/>
 
 
         <meta-data
